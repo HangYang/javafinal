@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="300.0" prefWidth="400.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.RegisterController">
+   <children>
+      <Label layoutX="53.0" layoutY="68.0" text="UserName：" textFill="WHITE" />
+      <Label layoutX="55.0" layoutY="140.0" text="PassWord：" textFill="WHITE" />
+      <TextField fx:id="txtusername" layoutX="144.0" layoutY="63.0" style="-fx-background-color: white;" />
+      <TextField fx:id="txtpassword" layoutX="144.0" layoutY="135.0" style="-fx-background-color: white;" />
+      <Button fx:id="btregister" layoutX="176.0" layoutY="225.0" mnemonicParsing="false" onAction="#Register" style="-fx-background-color: black;" text="REGISTER" textFill="WHITE" underline="true" />
+      <Button fx:id="btcancel" layoutX="277.0" layoutY="225.0" mnemonicParsing="false" onAction="#cancel" style="-fx-background-color: black;" text="CANCEL" textFill="WHITE" underline="true" />
+   </children>
+</AnchorPane>

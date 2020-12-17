@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="720.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ManagerFrameController">
+   <children>
+      <ImageView fitHeight="720.0" fitWidth="200.0" pickOnBounds="true">
+         <image>
+            <Image url="@../../../../Desktop/JAVA%20大作业/Pic/Yao1.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="54.0" layoutY="282.0" onMouseClicked="#NewPlayer" text="NEW PLAYER" underline="true" />
+      <Label layoutX="55.0" layoutY="360.0" onMouseClicked="#EditPlayer" text="EDIT PLAYER" underline="true" />
+      <AnchorPane fx:id="PaneNewPlayer" layoutX="200.0" prefHeight="720.0" prefWidth="824.0" style="-fx-border-color: black;" visible="false">
+         <children>
+            <Label layoutX="125.0" layoutY="116.0" text="ID：" />
+            <TextField fx:id="txtid" layoutX="222.0" layoutY="111.0" />
+            <Label layoutX="125.0" layoutY="167.0" text="FirstName：" />
+            <TextField fx:id="txtFirstName" layoutX="222.0" layoutY="162.0" />
+            <Label layoutX="126.0" layoutY="226.0" text="LastName：" />
+            <TextField fx:id="txtLastName" layoutX="222.0" layoutY="221.0" />
+            <Label layoutX="124.0" layoutY="282.0" text="Height：" />
+            <TextField fx:id="txtHeight" layoutX="222.0" layoutY="277.0" />
+            <Label layoutX="126.0" layoutY="339.0" text="Weight：" />
+            <TextField fx:id="txtWeight" layoutX="222.0" layoutY="334.0" />
+            <Label layoutX="464.0" layoutY="116.0" text="AVP：" />
+            <TextField fx:id="txtAVP" layoutX="524.0" layoutY="111.0" />
+            <Label layoutX="463.0" layoutY="167.0" text="AVR：" />
+            <TextField fx:id="txtAVR" layoutX="524.0" layoutY="162.0" />
+            <Label layoutX="463.0" layoutY="226.0" text="AVA：" />
+            <TextField fx:id="txtAVA" layoutX="524.0" layoutY="221.0" />
+            <Label layoutX="464.0" layoutY="282.0" text="TOP：" />
+            <TextField fx:id="txtTOP" layoutX="524.0" layoutY="277.0" />
+            <Label layoutX="464.0" layoutY="339.0" text="TOR：" />
+            <TextField fx:id="txtTOR" layoutX="524.0" layoutY="334.0" />
+            <Label layoutX="464.0" layoutY="395.0" text="TOA：" />
+            <TextField fx:id="txtTOA" layoutX="524.0" layoutY="390.0" />
+            <Button fx:id="btAdd" layoutX="524.0" layoutY="535.0" mnemonicParsing="false" onAction="#AddPlayer" text="ADD" />
+            <Button fx:id="btClear" layoutX="601.0" layoutY="535.0" mnemonicParsing="false" onAction="#clear" text="CLEAR" />
+            <Button fx:id="btCancel" layoutX="687.0" layoutY="535.0" mnemonicParsing="false" onAction="#cancel" text="CANCEL" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="PaneEditPlayer" layoutX="200.0" prefHeight="720.0" prefWidth="824.0" style="-fx-border-color: black;" visible="false">
+         <children>
+            <TextField fx:id="txtSearch" layoutX="143.0" layoutY="53.0" prefHeight="30.0" prefWidth="303.0" />
+            <Label layoutX="82.0" layoutY="58.0" text="INPUT：" />
+            <MenuButton layoutX="509.0" layoutY="53.0" mnemonicParsing="false" text="SEARCH">
+              <items>
+                <MenuItem fx:id="SearchID" mnemonicParsing="false" onAction="#SearchLikePlayerid" text="ID" />
+                  <MenuItem fx:id="SearchFN" mnemonicParsing="false" onAction="#SearchLikePlayerFirstName" text="FirstName" />
+                  <MenuItem fx:id="SearchLN" mnemonicParsing="false" onAction="#SearchLikePlayerLastName" text="LastName" />
+                  <MenuItem fx:id="SearchHeight" mnemonicParsing="false" onAction="#SearchLikePlayerHeight" text="Height" />
+                  <MenuItem fx:id="SearchWeight" mnemonicParsing="false" onAction="#SearchLikePlayerWeight" text="Weight" />
+                  <MenuItem fx:id="SearchAVP" mnemonicParsing="false" onAction="#SearchLikePlayerAVP" text="AVP" />
+                  <MenuItem fx:id="SearchAVR" mnemonicParsing="false" onAction="#SearchLikePlayerAVR" text="AVR" />
+                  <MenuItem fx:id="SearchAVA" mnemonicParsing="false" onAction="#SearchLikePlayerAVA" text="AVA" />
+                  <MenuItem fx:id="SearchTOP" mnemonicParsing="false" onAction="#SearchLikePlayerTOP" text="TOP" />
+                  <MenuItem fx:id="SearchTOR" mnemonicParsing="false" onAction="#SearchLikePlayerTOR" text="TOR" />
+                  <MenuItem fx:id="SearchTOA" mnemonicParsing="false" onAction="#SearchLikePlayerTOA" text="TOA" />
+              </items>
+            </MenuButton>
+            <MenuButton layoutX="625.0" layoutY="53.0" mnemonicParsing="false" text="EDIT">
+               <items>
+                  <MenuItem fx:id="EditID" mnemonicParsing="false" onAction="#EditPlayerid" text="ID" />
+                  <MenuItem fx:id="EditFirstName" mnemonicParsing="false" onAction="#EditPlayerFirstName" text="FirstName" />
+                  <MenuItem fx:id="EditLastName" mnemonicParsing="false" onAction="#EditPlayerLastName" text="LastName" />
+                  <MenuItem fx:id="EditHeight" mnemonicParsing="false" onAction="#EditPlayerHeight" text="Height" />
+                  <MenuItem fx:id="EditWeight" mnemonicParsing="false" onAction="#EditPlayerWeight" text="Weight" />
+                  <MenuItem fx:id="EditAVP" mnemonicParsing="false" onAction="#EditPlayerAVP" text="AVP" />
+                  <MenuItem fx:id="EditAVR" mnemonicParsing="false" onAction="#EditPlayerAVR" text="AVR" />
+                  <MenuItem fx:id="EditAVA" mnemonicParsing="false" onAction="#EditPlayerAVA" text="AVA" />
+                  <MenuItem fx:id="EditTOP" mnemonicParsing="false" onAction="#EditPlayerTOP" text="TOP" />
+                  <MenuItem fx:id="EditTOR" mnemonicParsing="false" onAction="#EditPlayerTOR" text="TOR" />
+                  <MenuItem fx:id="EditTOA" mnemonicParsing="false" onAction="#EditPlayerTOA" text="TOA" />
+               </items>
+            </MenuButton>
+            <MenuButton layoutX="715.0" layoutY="53.0" mnemonicParsing="false" text="ORDER">
+              <items>
+                  <MenuItem fx:id="OrderID" mnemonicParsing="false" text="ID" />
+                  <MenuItem fx:id="OrderFirstName" mnemonicParsing="false" text="FirstName" />
+                  <MenuItem fx:id="OrderLastName" mnemonicParsing="false" text="LastName" />
+                  <MenuItem fx:id="OrderHeight" mnemonicParsing="false" onAction="#OrderByHeight" text="Height" />
+                  <MenuItem fx:id="OrderWeight" mnemonicParsing="false" onAction="#OrderByWeight" text="Weight" />
+                  <MenuItem fx:id="OrderAVP" mnemonicParsing="false" onAction="#OrderByAVP" text="AVP" />
+                  <MenuItem fx:id="OrderAVR" mnemonicParsing="false" onAction="#OrderByAVR" text="AVR" />
+                  <MenuItem fx:id="OrderAVA" mnemonicParsing="false" onAction="#OrderByAVA" text="AVA" />
+                  <MenuItem fx:id="OrderTOP" mnemonicParsing="false" onAction="#OrderByTOP" text="TOP" />
+                  <MenuItem fx:id="OrderTOR" mnemonicParsing="false" onAction="#OrderByTOR" text="TOR" />
+                  <MenuItem fx:id="OrderTOA" mnemonicParsing="false" onAction="#OrderByTOA" text="TOA" />
+              </items>
+            </MenuButton>
+            <TableView fx:id="TableEdit" layoutX="17.0" layoutY="109.0" prefHeight="577.0" prefWidth="790.0">
+              <columns>
+                <TableColumn fx:id="Tableid" prefWidth="53.0" text="ID" />
+                <TableColumn fx:id="TableFirstName" prefWidth="87.0" text="FirstName" />
+                  <TableColumn fx:id="TableLastName" prefWidth="85.0" text="LastName" />
+                  <TableColumn fx:id="TableHeight" prefWidth="75.0" text="Height" />
+                  <TableColumn fx:id="TableWeight" prefWidth="75.0" text="Weight" />
+                  <TableColumn fx:id="TableAVP" prefWidth="63.0" text="AVP" />
+                  <TableColumn fx:id="TableAVR" prefWidth="72.0" text="AVR" />
+                  <TableColumn fx:id="TableAVA" prefWidth="68.0" text="AVA" />
+                  <TableColumn fx:id="TableTOP" prefWidth="70.0" text="TOP" />
+                  <TableColumn fx:id="TableTOR" prefWidth="63.0" text="TOR" />
+                  <TableColumn fx:id="TableTOA" prefWidth="78.0" text="TOA" />
+              </columns>
+            </TableView>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

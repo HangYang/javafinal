@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="PaneGuest" prefHeight="720.0" prefWidth="1024.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.GuestFrameController">
+   <children>
+      <ImageView fitHeight="438.0" fitWidth="704.0" layoutX="263.0" layoutY="164.0" onMouseClicked="#Jordan" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../Desktop/JAVA%20大作业/Pic/MJ.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="96.0" layoutY="66.0" onMouseClicked="#Home" text="HOME" textFill="#ffdd00" />
+      <MenuButton layoutX="192.0" layoutY="61.0" mnemonicParsing="false" style="-fx-background-color: black;" text="FRANCHISE PLAYERS" textFill="#ff00e1">
+        <items>
+          <MenuItem fx:id="MenuMJ" mnemonicParsing="false" onAction="#MJ" text="Micheal Jordan" />
+          <MenuItem fx:id="MenuKB" mnemonicParsing="false" onAction="#KB" text="Kobe Byrant" />
+        </items>
+      </MenuButton>
+      <MenuButton layoutX="400.0" layoutY="61.0" mnemonicParsing="false" style="-fx-background-color: black;" text="ACTIVE PLAYERS" textFill="#0011ff">
+        <items>
+          <MenuItem fx:id="MenuJH" mnemonicParsing="false" onAction="#JH" text="James Harden" />
+          <MenuItem fx:id="MenuLBJ" mnemonicParsing="false" onAction="#LBJ" text="Lebron James" />
+            <MenuItem fx:id="MenuJR" mnemonicParsing="false" onAction="#JR" text="JR Smith" />
+            <MenuItem fx:id="MenuMelo" mnemonicParsing="false" onAction="#Melo" text="Carmelo Anthony" />
+        </items>
+      </MenuButton>
+      <Label layoutX="583.0" layoutY="66.0" onMouseClicked="#ComparePlayer" text="COMPARE PLAYERS" textFill="#00ff3c" />
+      <Label layoutX="777.0" layoutY="66.0" onMouseClicked="#Help" text="HELP" textFill="WHITE" />
+      <AnchorPane fx:id="PaneJH" layoutY="120.0" prefHeight="600.0" prefWidth="1024.0" style="-fx-background-color: black;" visible="false">
+         <children>
+            <ImageView fitHeight="360.0" fitWidth="356.0" layoutX="155.0" layoutY="53.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../Desktop/JAVA%20大作业/Pic/JH.jpg" />
+               </image>
+            </ImageView>
+            <Label alignment="TOP_LEFT" layoutX="593.0" layoutY="53.0" prefHeight="360.0" prefWidth="289.0" text="詹姆斯·哈登（James Harden），1989年8月26日出生于美国加利福尼亚州洛杉矶（ Los Angeles, California），美国职业篮球运动员，司职后卫，效力于NBA休斯顿火箭队。詹姆斯·哈登于2009年通过选秀进入NBA，先后效力于雷霆队和火箭队，新秀赛季入选最佳新秀第二阵容，2011-12赛季当选最佳第六人，3次入选最佳阵容第一阵容，6次入选全明星阵容，2017-18赛季荣膺常规赛MVP。詹姆斯·哈登于2012年随美国男篮获伦敦奥运会金牌，2014年随美国队获西班牙篮球世界杯冠军。" textFill="RED" wrapText="true" />
+            <TableView fx:id="TableJH" layoutX="155.0" layoutY="480.0" prefHeight="80.0" prefWidth="682.0">
+              <columns>
+                <TableColumn fx:id="JHID" prefWidth="51.0" text="ID" />
+                <TableColumn fx:id="JHFN" prefWidth="85.0" text="FirstName" />
+                  <TableColumn fx:id="JHLN" prefWidth="89.0" text="LastName" />
+                  <TableColumn fx:id="JHHeight" prefWidth="75.0" text="Height" />
+                  <TableColumn fx:id="JHWeight" prefWidth="75.0" text="Weight" />
+                  <TableColumn fx:id="JHAVP" prefWidth="51.0" text="AVP" />
+                  <TableColumn fx:id="JHAVR" prefWidth="53.0" text="AVR" />
+                  <TableColumn fx:id="JHAVA" prefWidth="50.0" text="AVA" />
+                  <TableColumn fx:id="JHTOP" prefWidth="50.0" text="TOP" />
+                  <TableColumn fx:id="JHTOR" prefWidth="56.0" text="TOR" />
+                  <TableColumn fx:id="JHTOA" prefWidth="46.0" text="TOA" />
+              </columns>
+            </TableView>
+            <Button fx:id="btGetJH" layoutX="868.0" layoutY="530.0" mnemonicParsing="false" onAction="#SearchJH" style="-fx-background-color: black;" text="GET" textFill="RED" underline="true" />
+         </children></AnchorPane>
+      <AnchorPane fx:id="PaneKB" layoutY="120.0" prefHeight="600.0" prefWidth="1024.0" style="-fx-background-color: black;" visible="false">
+         <children>
+            <ImageView fitHeight="360.0" fitWidth="356.0" layoutX="155.0" layoutY="53.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../Desktop/JAVA%20大作业/Pic/KB.jpeg" />
+               </image>
+            </ImageView>
+            <Label alignment="TOP_LEFT" layoutX="593.0" layoutY="53.0" prefHeight="360.0" prefWidth="289.0" text="科比·布莱恩特（Kobe Bryant），1978年8月23日出生于美国宾夕法尼亚州费城，前美国职业篮球运动员，司职得分后卫/小前锋（锋卫摇摆人），绰号“黑曼巴”/“小飞侠”， 整个NBA生涯（1996年-2016年）全部效力于NBA洛杉矶湖人队，是前NBA球员乔·布莱恩特的儿子。 科比是NBA最好的得分手之一，生涯赢得无数奖项 ，突破、投篮、罚球、三分球他都驾轻就熟，几乎没有进攻盲区，单场比赛81分的个人纪录就有力地证明了这一点。除了疯狂的得分外，科比的组织能力也很出众，经常担任球队进攻的第一发起人。另外科比还是联盟中最好的防守人之一，贴身防守非常具有压迫性。2016年4月14日，科比·布莱恩特在生涯最后一场主场对阵爵士的常规赛后宣布退役。 2017年12月19日，湖人主场对阵勇士，中场时刻为科比的8号和24号2件球衣举行了退役仪式。 2018年3月13日，科比凭借和动画师格兰·基恩合作的短片《亲爱的篮球》获得第90届奥斯卡最佳短片奖。" textFill="RED" wrapText="true" />
+            <TableView fx:id="TableKB" layoutX="155.0" layoutY="480.0" prefHeight="80.0" prefWidth="682.0">
+               <columns>
+                  <TableColumn fx:id="KBID" prefWidth="51.0" text="ID" />
+                  <TableColumn fx:id="KBFN" prefWidth="85.0" text="FirstName" />
+                  <TableColumn fx:id="KBLN" prefWidth="89.0" text="LastName" />
+                  <TableColumn fx:id="KBHeight" prefWidth="75.0" text="Height" />
+                  <TableColumn fx:id="KBWeight" prefWidth="75.0" text="Weight" />
+                  <TableColumn fx:id="KBAVP" prefWidth="51.0" text="AVP" />
+                  <TableColumn fx:id="KBAVR" prefWidth="53.0" text="AVR" />
+                  <TableColumn fx:id="KBAVA" prefWidth="50.0" text="AVA" />
+                  <TableColumn fx:id="KBTOP" prefWidth="50.0" text="TOP" />
+                  <TableColumn fx:id="KBTOR" prefWidth="56.0" text="TOR" />
+                  <TableColumn fx:id="KBTOA" prefWidth="46.0" text="TOA" />
+               </columns>
+            </TableView>
+            <Button fx:id="btGetKB" layoutX="868.0" layoutY="530.0" mnemonicParsing="false" onAction="#SearchKB" style="-fx-background-color: black;" text="GET" textFill="RED" underline="true" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="PaneLBJ" layoutY="120.0" prefHeight="600.0" prefWidth="1024.0" style="-fx-background-color: black;" visible="false">
+         <children>
+            <ImageView fitHeight="360.0" fitWidth="356.0" layoutX="155.0" layoutY="53.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../Desktop/JAVA%20大作业/Pic/LBJ.jpg" />
+               </image>
+            </ImageView>
+            <Label alignment="TOP_LEFT" layoutX="593.0" layoutY="53.0" prefHeight="360.0" prefWidth="289.0" text="勒布朗·詹姆斯（LeBron James），1984年12月30日出生于美国俄亥俄州阿克伦（Akron, Ohio），美国职业篮球运动员，司职小前锋，绰号“小皇帝”，效力于NBA洛杉矶湖人队。詹姆斯在2003年NBA选秀中于首轮第1顺位被克利夫兰骑士队选中，在2009年与2010年蝉联NBA常规赛最有价值球员（MVP）。2010年，詹姆斯转会至迈阿密热火队。2012年，詹姆斯得到NBA个人生涯的第3座常规赛MVP，第1个总冠军和总决赛MVP。并代表美国男篮获得了伦敦奥运会金牌，追平了迈克尔·乔丹在1992年所创的纪录。2013年，詹姆斯获得第4个常规赛MVP、第2个NBA总冠军和第2个总决赛MVP，实现两连冠。2014年，詹姆斯回归骑士。2016年，詹姆斯带领骑士逆转战胜卫冕冠军勇士获得队史首个总冠军和个人第3个总决赛MVP。2018年7月10日，詹姆斯正式与湖人签下4年1.53亿美元的合同。詹姆斯篮球智商极高、突破犀利，拥有出色的视野和传球技术，被认为是NBA有史以来最为全能的球员之一。" textFill="RED" wrapText="true" />
+            <TableView fx:id="TableLBJ" layoutX="155.0" layoutY="480.0" prefHeight="80.0" prefWidth="682.0">
+               <columns>
+                  <TableColumn fx:id="LBJID" prefWidth="51.0" text="ID" />
+                  <TableColumn fx:id="LBJFN" prefWidth="85.0" text="FirstName" />
+                  <TableColumn fx:id="LBJLN" prefWidth="89.0" text="LastName" />
+                  <TableColumn fx:id="LBJHeight" prefWidth="75.0" text="Height" />
+                  <TableColumn fx:id="LBJWeight" prefWidth="75.0" text="Weight" />
+                  <TableColumn fx:id="LBJAVP" prefWidth="51.0" text="AVP" />
+                  <TableColumn fx:id="LBJAVR" prefWidth="53.0" text="AVR" />
+                  <TableColumn fx:id="LBJAVA" prefWidth="50.0" text="AVA" />
+                  <TableColumn fx:id="LBJTOP" prefWidth="50.0" text="TOP" />
+                  <TableColumn fx:id="LBJTOR" prefWidth="56.0" text="TOR" />
+                  <TableColumn fx:id="LBJTOA" prefWidth="46.0" text="TOA" />
+               </columns>
+            </TableView>
+            <Button fx:id="btGetLBJ" layoutX="868.0" layoutY="530.0" mnemonicParsing="false" onAction="#SearchLBJ" style="-fx-background-color: black;" text="GET" textFill="RED" underline="true" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="PaneJR" layoutY="120.0" prefHeight="600.0" prefWidth="1024.0" style="-fx-background-color: black;" visible="false">
+         <children>
+            <ImageView fitHeight="360.0" fitWidth="356.0" layoutX="155.0" layoutY="53.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../Desktop/JAVA%20大作业/Pic/JR.jpg" />
+               </image>
+            </ImageView>
+            <Label alignment="TOP_LEFT" layoutX="593.0" layoutY="53.0" prefHeight="360.0" prefWidth="289.0" text="高中时期，J.R.史密斯先后就读于斯坦内特高中、马克克里斯顿高中、莱克伍德高中和圣贝内迪克茨预备学校，J.R.史密斯在圣贝内迪克茨预备学校场均可得27分、6个篮板和5次助攻。 2004年，J.R.史密斯参加了麦当劳全明星赛，获得了这次大赛的MVP。赛后，史密斯决定放弃进军大学的梦想，寻找直接前往NBA打球的机会。J.R.史密斯（J.R.Smith），1985年9月9日出生于美国新泽西州费里霍尔德（Freehold, New Jersey），美国职业篮球运动员，司职得分后卫，效力于NBA克利夫兰骑士队。J.R.史密斯于2004年通过选秀进入NBA，先后效力于新奥尔良黄蜂、掘金、尼克斯和骑士等球队，2012-13赛季当选最佳第六人，2015-16赛季随骑士队夺得NBA总冠军。" textFill="RED" wrapText="true" />
+            <TableView fx:id="TableJR" layoutX="155.0" layoutY="480.0" prefHeight="80.0" prefWidth="682.0">
+               <columns>
+                  <TableColumn fx:id="JRID" prefWidth="51.0" text="ID" />
+                  <TableColumn fx:id="JRFN" prefWidth="85.0" text="FirstName" />
+                  <TableColumn fx:id="JRLN" prefWidth="89.0" text="LastName" />
+                  <TableColumn fx:id="JRHeight" prefWidth="75.0" text="Height" />
+                  <TableColumn fx:id="JRWeight" prefWidth="75.0" text="Weight" />
+                  <TableColumn fx:id="JRAVP" prefWidth="51.0" text="AVP" />
+                  <TableColumn fx:id="JRAVR" prefWidth="53.0" text="AVR" />
+                  <TableColumn fx:id="JRAVA" prefWidth="50.0" text="AVA" />
+                  <TableColumn fx:id="JRTOP" prefWidth="50.0" text="TOP" />
+                  <TableColumn fx:id="JRTOR" prefWidth="56.0" text="TOR" />
+                  <TableColumn fx:id="JRTOA" prefWidth="46.0" text="TOA" />
+               </columns>
+            </TableView>
+            <Button fx:id="btGetJR" layoutX="868.0" layoutY="530.0" mnemonicParsing="false" onAction="#SearchJR" style="-fx-background-color: black;" text="GET" textFill="RED" underline="true" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="PaneMelo" layoutY="120.0" prefHeight="600.0" prefWidth="1024.0" style="-fx-background-color: black;" visible="false">
+         <children>
+            <ImageView fitHeight="360.0" fitWidth="356.0" layoutX="155.0" layoutY="53.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../Desktop/JAVA%20大作业/Pic/Melo.jpg" />
+               </image>
+            </ImageView>
+            <Label alignment="TOP_LEFT" layoutX="593.0" layoutY="53.0" prefHeight="360.0" prefWidth="289.0" text="卡梅隆·安东尼（Carmelo Anthony），1984年5月29日出生于美国纽约市布鲁克林区（Brooklyn， New York），美国职业篮球运动员，司职小前锋，绰号“甜瓜”，效力于NBA休斯敦火箭队。2003年，安东尼带领雪城大学夺得NCAA冠军。同年参加2003年NBA选秀，在第一轮第三顺位被丹佛掘金队选中，2005年当选NBA新秀挑战赛MVP。2009年带领掘金队打进西部决赛，2012年2月被交易至纽约尼克斯队，2012-13赛季荣膺NBA常规赛得分王。2017年9月被交易至俄克拉荷马城雷霆队，2018年8月加盟休斯顿火箭队。安东尼职业生涯共10次入选NBA全明星阵容，二次入选NBA最佳阵容二阵，四次入选NBA最佳阵容三阵。 作为美国男篮“梦之队”成员，安东尼代表美国队参加过四届奥运会，夺得2008年北京奥运会、2012年伦敦奥运会、2016年里约奥运会三枚金牌，是美国队史得分王和获得金牌最多的球员。里约奥运会后，安东尼宣布退出美国国家队。" textFill="RED" wrapText="true" />
+            <TableView fx:id="TableMelo" layoutX="155.0" layoutY="480.0" prefHeight="80.0" prefWidth="682.0">
+               <columns>
+                  <TableColumn fx:id="MELOID" prefWidth="51.0" text="ID" />
+                  <TableColumn fx:id="MELOFN" prefWidth="85.0" text="FirstName" />
+                  <TableColumn fx:id="MELOLN" prefWidth="89.0" text="LastName" />
+                  <TableColumn fx:id="MELOHeight" prefWidth="75.0" text="Height" />
+                  <TableColumn fx:id="MELOWeight" prefWidth="75.0" text="Weight" />
+                  <TableColumn fx:id="MELOAVP" prefWidth="51.0" text="AVP" />
+                  <TableColumn fx:id="MELOAVR" prefWidth="53.0" text="AVR" />
+                  <TableColumn fx:id="MELOAVA" prefWidth="50.0" text="AVA" />
+                  <TableColumn fx:id="MELOTOP" prefWidth="50.0" text="TOP" />
+                  <TableColumn fx:id="MELOTOR" prefWidth="56.0" text="TOR" />
+                  <TableColumn fx:id="MELOTOA" prefWidth="46.0" text="TOA" />
+               </columns>
+            </TableView>
+            <Button fx:id="btGetMelo" layoutX="868.0" layoutY="530.0" mnemonicParsing="false" onAction="#SearchMelo" style="-fx-background-color: black;" text="GET" textFill="RED" underline="true" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="PaneMJ" layoutY="120.0" prefHeight="600.0" prefWidth="1024.0" style="-fx-background-color: black;" visible="false">
+         <children>
+            <ImageView fitHeight="360.0" fitWidth="356.0" layoutX="155.0" layoutY="53.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../Desktop/JAVA%20大作业/Pic/mj.jpeg" />
+               </image>
+            </ImageView>
+            <Label alignment="TOP_LEFT" layoutX="593.0" layoutY="53.0" prefHeight="360.0" prefWidth="289.0" text="迈克尔·乔丹（Michael Jordan），1963年2月17日生于美国纽约布鲁克林，前美国职业篮球运动员，司职得分后卫，绰号“飞人”（Air Jordan）  。迈克尔·乔丹在在1984年NBA选秀中于第1轮第3位被芝加哥公牛队选中，职业生涯曾效力于芝加哥公牛队以及华盛顿奇才队，新秀赛季当选NBA年度最佳新秀。1986-87赛季，乔丹场均得到37.1分，首次获得NBA得分王称号。1991-93赛季，乔丹连续3次荣膺常规赛MVP以及总决赛MVP（FMVP），率领芝加哥公牛队3夺NBA总冠军。1993年10月6日因父亲被害而宣布退役，两年后宣布复出。1996年入选NBA50大巨星。1996-98赛季，乔丹荣膺个人职业生涯第10次（共10次）NBA得分王以及第5次（共5次）常规赛MVP，并再次率领公牛队3夺（共6次）NBA总冠军，自己当选共第6次总决赛MVP。1999年1月13日在劳资谈判失败后再次宣布退役，两年后在华盛顿奇才队再次宣布复出。迈克尔·乔丹的职业生涯年年入选NBA全明星阵容（共14次）并3次当选NBA全明星MVP，10次入选NBA最佳阵容一阵，1985年入选NBA最佳阵容二阵，1988年荣膺NBA年度最佳防守球员，9次入选NBA最佳防守阵容一阵，3次荣膺NBA抢断王，2次夺得NBA全明星扣篮大赛冠军，1984年以及1992年夺得奥运会金牌。2003年4月16日，迈克尔·乔丹在职业生涯最后一场奇才主场对阵76人比赛的赛后正式宣布退役   。他被认为是历史上最伟大的篮球运动员  ，他的23号球衣分别被公牛队以及热火队退役。2009年9月11日，迈克尔·乔丹入选奈·史密斯篮球名人纪念堂 。" textFill="RED" wrapText="true" />
+            <TableView fx:id="TableMJ" layoutX="155.0" layoutY="480.0" prefHeight="80.0" prefWidth="682.0">
+               <columns>
+                  <TableColumn fx:id="MJID" prefWidth="51.0" text="ID" />
+                  <TableColumn fx:id="MJFN" prefWidth="85.0" text="FirstName" />
+                  <TableColumn fx:id="MJLN" prefWidth="89.0" text="LastName" />
+                  <TableColumn fx:id="MJHeight" prefWidth="75.0" text="Height" />
+                  <TableColumn fx:id="MJWeight" prefWidth="75.0" text="Weight" />
+                  <TableColumn fx:id="MJAVP" prefWidth="51.0" text="AVP" />
+                  <TableColumn fx:id="MJAVR" prefWidth="53.0" text="AVR" />
+                  <TableColumn fx:id="MJAVA" prefWidth="50.0" text="AVA" />
+                  <TableColumn fx:id="MJTOP" prefWidth="50.0" text="TOP" />
+                  <TableColumn fx:id="MJTOR" prefWidth="56.0" text="TOR" />
+                  <TableColumn fx:id="MJTOA" prefWidth="46.0" text="TOA" />
+               </columns>
+            </TableView>
+            <Button fx:id="btGetMJ" layoutX="868.0" layoutY="530.0" mnemonicParsing="false" onAction="#SearchMJ" style="-fx-background-color: black;" text="GET" textFill="RED" underline="true" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="PaneComparePlayer" layoutY="120.0" prefHeight="600.0" prefWidth="1024.0" style="-fx-background-color: black;" visible="false">
+         <children>
+            <TableView fx:id="TableCompare" layoutX="68.0" layoutY="35.0" prefHeight="531.0" prefWidth="737.0" style="-fx-background-color: black;">
+              <columns>
+                <TableColumn fx:id="tableid" prefWidth="44.0" text="ID" />
+                <TableColumn fx:id="tableFN" prefWidth="84.0" text="FirstName" />
+                  <TableColumn fx:id="tableLN" prefWidth="82.0" text="LastName" />
+                  <TableColumn fx:id="tableHeight" prefWidth="68.0" text="Height" />
+                  <TableColumn fx:id="tableWeight" prefWidth="70.0" text="Weight" />
+                  <TableColumn fx:id="tableAVP" prefWidth="64.0" text="AVP" />
+                  <TableColumn fx:id="tableAVR" prefWidth="66.0" text="AVR" />
+                  <TableColumn fx:id="tableAVA" prefWidth="67.0" text="AVA" />
+                  <TableColumn fx:id="tableTOP" prefWidth="66.0" text="TOP" />
+                  <TableColumn fx:id="tableTOR" prefWidth="62.0" text="TOR" />
+                  <TableColumn fx:id="tableTOA" prefWidth="63.0" text="TOA" />
+              </columns>
+            </TableView>
+            <MenuButton layoutX="847.0" layoutY="87.0" mnemonicParsing="false" style="-fx-background-color: black;" text="PLAYER" textFill="#00ffa6">
+              <items>
+                <MenuItem mnemonicParsing="false" onAction="#Micheal" text="Micheal Jordan" />
+                  <MenuItem mnemonicParsing="false" onAction="#Kobe" text="Kobe Byrant" />
+                  <MenuItem mnemonicParsing="false" onAction="#Harden" text="James Harden" />
+                  <MenuItem mnemonicParsing="false" onAction="#Lebron" text="Lebron James" />
+                  <MenuItem mnemonicParsing="false" onAction="#Smith" text="JR Smith" />
+                <MenuItem mnemonicParsing="false" onAction="#Carmelo" text="Carmelo Anthony" />
+              </items>
+            </MenuButton>
+            <Button layoutX="847.0" layoutY="210.0" mnemonicParsing="false" onAction="#delete" style="-fx-background-color: black;" text="DELETE" textFill="#d0ff00" underline="true" />
+            <Button layoutX="847.0" layoutY="329.0" mnemonicParsing="false" onAction="#clear" style="-fx-background-color: black;" text="CLEAR" textFill="#ff8000" underline="true" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="PaneHelp" layoutY="120.0" prefHeight="600.0" prefWidth="1024.0" visible="false">
+         <children>
+            <Label layoutX="155.0" layoutY="44.0" prefHeight="30.0" prefWidth="64.0" text="ADVICE:" textFill="RED" />
+            <TextField fx:id="txtAdvice" alignment="TOP_LEFT" layoutX="155.0" layoutY="91.0" prefHeight="198.0" prefWidth="749.0" style="-fx-background-color: white;" />
+            <Label layoutX="155.0" layoutY="328.0" text="NAME:" textFill="RED" />
+            <Label layoutX="155.0" layoutY="391.0" text="ID NUMBER:" textFill="RED" />
+            <Label layoutX="155.0" layoutY="456.0" text="DEPT:" textFill="RED" />
+            <Label layoutX="245.0" layoutY="328.0" text="Bank Yang" textFill="WHITE" />
+            <Label layoutX="284.0" layoutY="391.0" text="1701090042" textFill="WHITE" />
+            <Label layoutX="226.0" layoutY="456.0" text="17 CST 2+2" textFill="WHITE" />
+            <Button fx:id="btSend" layoutX="843.0" layoutY="313.0" mnemonicParsing="false" onAction="#Send" style="-fx-background-color: black;" text="SEND" textFill="RED" underline="true" />
+         </children>
+      </AnchorPane>
+      <Label layoutX="924.0" layoutY="14.0" onMouseClicked="#Personal" text="PERSONAL" textFill="#bb00ff" />
+      <AnchorPane fx:id="PanePersonal" layoutY="120.0" onMouseClicked="#getDate" onMouseEntered="#getuserName" prefHeight="600.0" prefWidth="1024.0" style="-fx-background-color: black;" visible="false">
+         <children>
+            <Label layoutX="156.0" layoutY="127.0" text="USERNAME：" textFill="#00ffcc" />
+            <Label layoutX="156.0" layoutY="192.0" text="TYPE：" textFill="#00ffcc" />
+            <Label layoutX="156.0" layoutY="264.0" text="DATE：" textFill="#00ffcc" />
+            <Label layoutX="156.0" layoutY="328.0" onMouseClicked="#ChangePassword" text="CHANGE PASSWORD" textFill="#6200ff" underline="true" />
+            <Label fx:id="lblusername" layoutX="291.0" layoutY="127.0" text="Label" textFill="#00ffcc" />
+            <Label layoutX="236.0" layoutY="192.0" text="Guest" textFill="#00ffcc" />
+            <Label fx:id="lblDate" layoutX="236.0" layoutY="264.0" text="Label" textFill="#00ffcc" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="PaneChangePassword" layoutX="512.0" layoutY="320.0" prefHeight="300.0" prefWidth="400.0" style="-fx-background-color: black;" visible="false">
+         <children>
+            <Label layoutX="23.0" layoutY="50.0" text="USERNAME：" />
+            <Label layoutX="23.0" layoutY="99.0" text="FORMER PASSWORD：" />
+            <Label layoutX="23.0" layoutY="150.0" text="NEW PASSWORD：" />
+            <Button fx:id="btConfirm" layoutX="201.0" layoutY="218.0" mnemonicParsing="false" onAction="#Confirm" prefHeight="37.0" prefWidth="99.0" style="-fx-background-color: black;" text="CONFIRM" textFill="#00ff59" underline="true" />
+            <Button fx:id="btCancelChange" layoutX="302.0" layoutY="225.0" mnemonicParsing="false" onAction="#CancelinChangePassword" style="-fx-background-color: black;" text="CANCEL" textFill="#ff1e00" underline="true" />
+            <TextField fx:id="txtChangeUsername" layoutX="171.0" layoutY="45.0" />
+            <TextField fx:id="txtOldPassword" layoutX="200.0" layoutY="94.0" prefHeight="30.0" prefWidth="174.0" />
+            <TextField fx:id="txtChangePassword" layoutX="171.0" layoutY="145.0" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
